@@ -18,10 +18,10 @@ const service = axios.create({
 // 添加请求拦截器
 service.interceptors.request.use(
   (config:any) => {
-    let token:string =''//此处换成自己获取回来的token，通常存在在cookie或者store里面
+    let token:string ='WEB|eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJhdmF0YXJcIjpcImh0dHA6Ly9jaHVuZW5nLWRldi5vc3MtY24tc2hlbnpoZW4uYWxpeXVuY3MuY29tL2J1c2luZXNzL3Vzci9hdmF0YXIvMTAwMDFcIixcImJyYW5kSWRcIjoxMDEsXCJtZW51SWRzXCI6WzEsNjY4LDEyNzJdLFwicGhvbmVcIjpcIjEwMDAxXCIsXCJwcm9qZWN0SWRcIjoxMDEsXCJyZWFsTmFtZVwiOlwi6L-Q6JClXCIsXCJyZWFsbmFtZVwiOlwi6L-Q6JClXCIsXCJyb2xlSWRcIjoxNCxcInNob3BzXCI6W10sXCJzeXNDaGFubmVsXCI6XCJXRUJcIixcInN5c0NvZGVcIjpcIjAwMDAxMTExXCIsXCJ1c2VySWRcIjo5NzIxLFwidXNlclR5cGVcIjoxfSIsImlhdCI6MTY2MDYxMjgwNywiZXhwIjoxNjYwNjk5MjA3fQ.w5vj2fyaZmzQcwucDDKi24-VsIsN4FKaL49xGrpIGW-conx82YoO03zHTMbUNP7qFW8zP3cT0bBmolp2geEYsA'//此处换成自己获取回来的token，通常存在在cookie或者store里面
     if (token) {
       // 让每个请求携带token-- ['X-Token']为自定义key 请根据实际情况自行修改
-      config.headers['X-Token'] = token
+      config.headers['token'] = token
 
       config.headers.Authorization =  + token
      }

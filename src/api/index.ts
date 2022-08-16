@@ -19,11 +19,11 @@ deleteRequest} from "@/utils/request"
 //   })
 // }
 
-// 接口名称
+// 用户信息接口
 export const _getUserInfo = (params: any) => {
-    return getRequest('/get/userInfo', params)
+    return getRequest('/business/v1/auth/userMenus?t=1660612807956&menuId=1&roleId=14', params)
 }
-// 接口名称
+// 登录接口
 export const _postLogin = (params: any) => {
     return postRequest('/business/v1/auth/login', params)
 }
