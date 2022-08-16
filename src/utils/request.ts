@@ -9,8 +9,6 @@ let base = '/api';
 
 // 创建axios
 const service = axios.create({
-  // baseURL: '/api',
-  //baseURL: 'http://xxx.xxx.xx.xxx',
     withCredentials: true,
   timeout:15000
 });
